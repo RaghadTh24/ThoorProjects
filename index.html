@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>جمعية طهور</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عمودي */
+}
+
+main {
+    flex: 1 0 auto; /* يملأ المساحة ويقلص حسب الحاجة */
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: #000;
+    flex-shrink: 0; /* يمنع تقليصه */
+}
+
+.container, .row {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* شريط علوي */
+
+.topbar .logo {
+    height: 40px;
+}
+.topbar .divider {
+    border-left: 1px solid #ccc;
+    margin: 0 15px;
+    height: 30px;
+}
+.topbar .phone {
+    font-size: 15px;
+    font-weight: 500;
+}
+.topbar {
+    background-image: url('hr.jpg');
+    background-size: cover; /* يغطي كامل الشريط */
+    background-position: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px; /* زيادة ارتفاع الشريط */
+}
+
+
+/* أزرار المشاريع العاجلة والمكتملة */
+.btn-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+}
+
+.btn-icon {
+    width: 14px;
+    height: 14px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-circle.active-urgent .btn-icon,
+.btn-circle.active-completed .btn-icon {
+    display: block;
+}
+</style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- شريط علوي -->
+<!-- شريط علوي -->
+<div class="topbar d-flex align-items-center justify-content-between" dir="rtl" style="padding: 9px 140px;">
+    <div class="d-flex align-items-center">
+        <img src="Thoor.Png" alt="Logo" class="logo" style="height: 50px;">
+        <div class="divider mx-2"></div>
+        <img src="no1.jpg" alt="No1" class="rounded-circle ms-2" style="height: 28px; width: 28px; object-fit: cover;">
+        <span class="phone ms-2" style="color: gray;">‪+966 505600901‬</span>
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-success btn-sm" style="border-color: #1C918C; color: #1C918C; background-color: #fff;">
+            <i class="bi bi-cart-fill"></i> 
+        </button>
+        <button class="btn btn-success btn-sm" style="background-color: #1C918C; border-color: #1C918C;">
+            <i class="bi bi-box-arrow-in-right"></i> تسجيل دخول
+        </button>
+    </div>
+</div>
+
+
+
+<!-- شريط الأقسام -->
+<div class="menu-bar d-flex justify-content-center align-items-center" dir="rtl" 
+     style="background: linear-gradient(to left, #ABA977, #1C918C); padding: 10px 20px;">
+
+    <!-- الرئيسية بدون سهم -->
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold" style="font-size: 0.8rem;">الرئيسية</a>
+    
+    <!-- باقي القوائم مع سهم صغير -->
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        عن الجمعية 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        متجر التبرع الالكتروني 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        الخدمات الإلكترونية 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        الحوكمة 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        المركز الإعلامي 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+    <a href="#!" class="text-white mx-3 text-decoration-none fw-bold d-flex align-items-center" style="font-size: 0.8rem; gap: 4px;">
+        اتصل بنا 
+        <i class="bi bi-chevron-down" style="font-size: 0.65rem; position: relative; top: 2px;"></i>
+    </a>
+</div>
+
+
+<!-- المحتوى الرئيسي -->
+<main class="flex-fill">
+
+<!-- القسم الرئيسي مع المشاريع -->
+<section class="py-5" dir="rtl">
+    <div class="container px-5">
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="bg-featured-blog" 
+                             style="background-image: url('pi.jpg'); 
+                                    height: 100%; 
+                                    background-size: cover; 
+                                    background-position: center;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <h1 class="fw-bolder fs-3 mb-3" style="color:#1C918C;">المشاريع</h1>
+                            <p class="text-muted fs-5">
+                                صنائع المعروف تقي مصارع السوء وتزرع الأمل في قلوب المحتاجين، فكل مساهمة صغيرة تصنع فرقًا كبيرًا في حياة الآخرين.                                                                                                                                                                                         
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- شريط البحث واختيار المشروع -->
+<section class="py-5" dir="rtl">
+<div class="card mb-4 p-3 shadow-sm mx-auto mt-4" dir="rtl" style="max-width: 1048px;">
+    <div class="row gx-3 align-items-center">
+        <!-- حقل البحث -->
+        <div class="col-lg-3">
+            <input type="text" class="form-control" placeholder="ابحث عن مشروع...">
+        </div>
+
+        <!-- القائمة المنسدلة -->
+        <div class="col-lg-3">
+            <select class="form-select border-0 border-bottom" style="border-radius: 0;">
+                <option selected>اختر أي تصنيف</option>
+                <option value="1">مشروع 1</option>
+                <option value="2">مشروع 2</option>
+                <option value="3">مشروع 3</option>
+            </select>
+        </div>
+
+        <!-- أزرار الدائرة -->
+        <div class="col-lg-2 d-flex align-items-center justify-content-center gap-2">
+            <button class="btn-circle" id="urgentBtn" style="border: 1.5px solid #ccc;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="✔" class="btn-icon">
+            </button>
+            <span>المشاريع العاجلة</span>
+        </div>
+        <div class="col-lg-2 d-flex align-items-center justify-content-center gap-2">
+            <button class="btn-circle" id="completedBtn" style="border: 1.5px solid #ccc;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="✔" class="btn-icon">
+            </button>
+            <span>المشاريع المكتملة</span>
+        </div>
+
+        <!-- زر تطبيق التصفية -->
+        <div class="col-lg-2 d-flex justify-content-center">
+            <button class="btn" style="background-color: #1C918C; color: white; width: 100%;">تطبيق التصفية</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const urgentBtn = document.getElementById('urgentBtn');
+const completedBtn = document.getElementById('completedBtn');
+
+function toggleCircleImage(button) {
+    const img = button.querySelector('img');
+    if(img.src.includes("cr.jpg")) { // إذا الصورة موجودة الآن
+        img.style.display = "none";   // أخفيها
+        img.src = "";                 // أفرغ المصدر
+    } else {
+        img.src = "cr.jpg";           // اضبط المصدر
+        img.style.display = "block";  // أظهرها
+    }
+}
+
+urgentBtn.addEventListener('click', () => {
+    toggleCircleImage(urgentBtn);
+});
+
+completedBtn.addEventListener('click', () => {
+    toggleCircleImage(completedBtn);
+});
+</script>
+<div class="container px-5">
+    <div class="row gx-5">
+
+        <!-- مشروع 1 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t1.jpg" alt="مشروع 1" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">حالات (تفريج كربه)</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 5000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #1C918C;">60%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="100 ريال" readonly data-price="100" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مشروع 2 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t2.jpg" alt="مشروع 2" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">علاج الأيتام</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 3000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 40%; background-color: #1C918C;">40%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="30 ريال" readonly data-price="30" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مشروع 3 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t3.jpg" alt="مشروع 3" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">علاج الأرامل</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 4000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #1C918C;">50%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="40 ريال" readonly data-price="40" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مشروع 4 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t4.jpg" alt="مشروع 4" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">علاج الأسنان</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 6000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #1C918C;">30%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="60 ريال" readonly data-price="60" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مشروع 5 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t5.jpg" alt="مشروع 5" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">عمليات العيون (مشروع رؤية)</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 7000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #1C918C;">75%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="70 ريال" readonly data-price="70" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مشروع 6 -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+                <img class="card-img-top" src="t6.jpg" alt="مشروع 6" />
+                <div class="card-body p-4 text-center text-muted">
+                    <a class="text-decoration-none link-dark stretched-link" href="#!">
+                        <div class="h5 card-title mb-3">الاحتياجات الخاصة (مشروع إرادة)</div>
+                    </a>
+                    <div class="mb-3">
+                        <label class="form-label small d-block text-center">المبلغ المطلوب: 8000 ريال</label>
+                        <div class="progress" style="height: 25px; border-radius: 3;">
+                            <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #1C918C;">20%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">المبلغ الذي ستدفعه:</label>
+                        <div class="input-group input-group-sm">
+                            <button class="btn" type="button" onclick="updatePayment(this, 1)" style="background-color: #d3d3d3; border-radius: 0 0.5rem 0.5rem 0;">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                            <input type="text" class="form-control text-center" value="80 ريال" readonly data-price="80" data-count="1" style="border-radius: 0;">
+                            <button class="btn" type="button" onclick="updatePayment(this, -1)" style="background-color: #d3d3d3; border-radius: 0.5rem 0 0 0.5rem;">
+                                <i class="bi bi-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn flex-grow-1" style="background-color: #ABA977; color: white;">تبرع الآن</button>
+                        <button class="btn flex-grow-1" style="background-color: #1C918C; color: white;">أضف للسلة</button>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <span class="fw-bold text-muted me-4">قم بالمشاركة</span>
+                        <button class="btn btn-white btn-sm" style="border: 1px solid #ABA977; color: #ABA977;" onclick="shareProject()">مشاركة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+
+
+</main>
+<!-- Footer-->
+<footer class="py-5 mt-auto" style="background-color: #1C918C;">
+ <div class="container px-5">
+        <div class="d-flex justify-content-between flex-wrap">
+            <!-- تواصل معنا على اليسار -->
+            <div class="mb-4" style="max-width: 45%;">
+                <h5 class="text-white mb-2 text-start">تواصل معنا</h5>
+                <p class="text-white-50 small mb-1"><i class="bi bi-telephone-fill"></i> 0148481184</p>
+                <p class="text-white-50 small mb-1"><i class="bi bi-telephone-fill"></i> 0505600901</p>
+                <p class="text-white-50 small mb-1"><i class="bi bi-envelope-fill"></i> Tahooor.ch@gmail.com</p>
+                <p class="text-white-50 small mb-1"><i class="bi bi-geo-alt-fill"></i> المدينة_المنورة _حي العصبة _بجوار مصلحه المياه</p>
+            </div>
+
+            <!-- نبذة عن الجمعية على اليمين -->
+            <div class="mb-4" style="max-width: 45%;">
+                <h5 class="text-white mb-2 text-end">نبذة عن الجمعية</h5>
+                <p class="text-white-50 small text-end mb-1">
+                    جمعية طهور لتنسيق العلاج الطبي تهدف إلى تقديم الدعم الطبي والمجتمعي للمحتاجين بالمدينة المنورة.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="py-2" style="background-color: #9E9E77;">
+    <div class="container d-flex justify-content-between">
+        <p class="text-white-50 small mb-0">تصميم و تطوير: آفاق العالمية لنظم المعلومات</p>
+        <p class="text-white-50 small mb-0">جميع الحقوق محفوظة © جمعية طهور لتنسيق العلاج الطبي 2025</p>
+    </div>
+</div>
+
+
+</html>
+
